@@ -1,0 +1,262 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  background-color: #bd3633;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar-brand img {
+  height: 150px;
+  transition: height 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background-color: #a42f2d !important;
+  color: #222 !important;
+}
+
+/* Espaçamento customizado do menu */
+.navbar-nav.custom-menu-spacing {
+  padding-right: 0;
+  margin-left: 0;
+}
+
+/* Container e títulos */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h2, h3, h4 {
+  color: #bd3633;
+  font-weight: 700;
+}
+
+/* Formulário */
+form {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(189, 54, 51, 0.5);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #eee;
+}
+
+.form-control,
+.form-select {
+  background-color: #2a2a2a;
+  border: 1.5px solid #bd3633;
+  color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #f44336;
+  box-shadow: 0 0 5px #f44336;
+  background-color: #333;
+  color: #fff;
+}
+
+.invalid-feedback {
+  color: #ff6b6b;
+}
+
+/* Botão Enviar */
+.btn {
+  background-color: #bd3633;
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #a42f2d;
+  transform: scale(1.05);
+  color: white;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 50px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #bd3633;
+  color: #fff;
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.4);
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablets e telas médias */
+@media (max-width: 992px) {
+  .navbar-brand img {
+    height: 120px;
+  }
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .btn {
+    margin-top: 0.5rem;
+  }
+}
+
+/* Navbar menu aberto no mobile */
+@media (max-width: 991.98px) {
+  #navbarNav.collapse.show {
+    background-color: #bd3633;
+    width: 10%;
+  }
+
+  
+
+  #navbarNav .navbar-nav {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  #navbarNav .nav-item {
+    margin-bottom: 0.5rem !important;
+  }
+  #navbarNav .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 576px) {
+  .navbar-brand img {
+    height: 90px;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    font-size: 40px;
+    bottom: 20px;
+    right: 10px;
+  }
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+  form {
+    padding: 1rem;
+  }
+}
+
+.nav-link.active {
+  color: #222 !important;
+}
+
+/* Seção Hero com imagem de fundo (parallax e overlay escuro) */
+
+
+.hero-section h1,
+.hero-section p {
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section .btn {
+  background-color: #bd3633;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+  background-color: #9c2c29;
+  color: white;
+}
+
+/* Correção no mobile: evitar corte da imagem e do conteúdo */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+    background-position: top center;
+    background-size: contain;
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
